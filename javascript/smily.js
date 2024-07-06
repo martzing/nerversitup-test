@@ -1,4 +1,7 @@
 const countSmileys = (faces) => {
+    if (!Array.isArray(faces)) {
+        throw new Error('Invalid input type')
+    }
     if (faces.length === 0) return 0 
     let result = 0
     for (const face of faces) {

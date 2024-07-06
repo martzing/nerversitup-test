@@ -29,4 +29,10 @@ describe('Permutation function test', () => {
             'cbaba', 'cbbaa'
           ])
     })
+
+    test('invalid input type', () => {
+        expect(() => {
+            permutation(1234)
+        }).toThrow('Invalid input type')
+    })
 })

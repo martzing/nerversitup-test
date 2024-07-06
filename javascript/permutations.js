@@ -1,8 +1,12 @@
 const permutation = (str) => {
+    if (typeof str !== 'string') {
+        throw new Error('Invalid input type')
+    }
+    str = str.split('').sort().join('');
     const results = []
     const used = new Array(str.length).fill(false)
     backtrack(str, [], used, results)
-    return results.sort()
+    return results
 }
 
 const backtrack = (str, path, used, results) => {

@@ -24,4 +24,10 @@ describe('OddNumber function test', () => {
     test('input is [1,2,2,3,3,3,4,3,3,3,2,2,1]', () => {
         expect(oddNumber([1,2,2,3,3,3,4,3,3,3,2,2,1])).toBe(4)
     })
+
+    test('invalid input type', () => {
+        expect(() => {
+            oddNumber('1,1,2')
+        }).toThrow('Invalid input type')
+    })
 })
